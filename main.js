@@ -5,8 +5,9 @@ document.querySelector("#app").innerHTML = `
     <nav class="navbar">
       <img 
         class="logo" 
-        src="./src/assets/valhalla-logo.png" alt="Valhalla logo" 
-      /> 
+        src="./src/assets/valhalla-logo.png"
+        alt="Valhalla logo" 
+      />
       <ul>
         <li>home</li>
         <li>story</li>
@@ -25,15 +26,15 @@ document.querySelector("#app").innerHTML = `
         <div class="cards">   
           <img
             class="card" 
-            src="./src/assets/home-card-basim.png" alt="Illustrative image of a game character called Basim" 
+            src="./src/assets/home-card-basim.jpg" alt="Illustrative image of a game character called Basim" 
           />
           <img
             class="card" 
-            src="./src/assets/home-card-flann.png" alt="Illustrative image of a game character called Flann Sinna" 
+            src="./src/assets/home-card-flann.jpg" alt="Illustrative image of a game character called Flann Sinna" 
           />
           <img
             class="card"           
-            src="./src/assets/home-card-aelfred.png" alt="Illustrative image of a game character called Aelfred" 
+            src="./src/assets/home-card-aelfred.jpg" alt="Illustrative image of a game character called Aelfred" 
           />
         </div>
       </div>
