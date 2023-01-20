@@ -1,0 +1,54 @@
+@use "../variables";
+
+#home {
+  background: url(../../../src/assets/home-background.png);
+  background-size: cover;
+  width: 100%;
+  height: 1094px;
+
+  .container {
+    float: right;
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-top: 11rem;
+
+    img {
+      width: 50%;
+      border: 1px solid;
+      border-image-source: linear-gradient(
+        113.28deg,
+        #074138 0.96%,
+        rgba(180, 180, 180, 0.36) 109.56%
+      );
+    }
+
+    h1 {
+      font-size: 1.25rem;
+      line-height: 2rem;
+      letter-spacing: -0.01em;
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-family: variables.$font-primary;
+      color: darken(variables.$letters-color, 25);
+
+      margin: 1.375rem 0;
+      width: 60%;
+
+      span {
+        position: relative;
+        bottom: -0.4rem;
+        color: darken(variables.$letters-color, 15);
+        font-size: 2rem;
+        opacity: 1;
+      }
+    }
+
+    .card {
+      width: 20%;
+    }
+  }
+}
