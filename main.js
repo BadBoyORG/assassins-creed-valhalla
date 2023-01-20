@@ -21,19 +21,19 @@ document.querySelector("#app").innerHTML = `
           src="./src/assets/home-picture.png" alt="Illustrative image of the game" 
         />
         <h1><span>P</span>lay a viking name eivor who as been trained since childhood to become warrior</h1> 
-        <a href="https://store.ubi.com/ofertas/assassins-creed-valhalla/5e8353ff5cdf9a21c0b4e72e.html?lang=en" target="_blank">buy now</a>
-        <div class="cards">
+        <a href="https://store.ubi.com/ofertas/assassins-creed-valhalla/5e8353ff5cdf9a21c0b4e72e.html?lang=en " target="_blank">buy now</a>
+        <div class="cards">   
           <img
-            class="card"           
-            src="./src/assets/home-card-aelfred.png" alt="Illustrative image of a game character called Aelfred" 
+            class="card" 
+            src="./src/assets/home-card-basim.png" alt="Illustrative image of a game character called Basim" 
           />
           <img
             class="card" 
             src="./src/assets/home-card-flann.png" alt="Illustrative image of a game character called Flann Sinna" 
           />
           <img
-            class="card" 
-            src="./src/assets/home-card-basim.png" alt="Illustrative image of a game character called Basim" 
+            class="card"           
+            src="./src/assets/home-card-aelfred.png" alt="Illustrative image of a game character called Aelfred" 
           />
         </div>
       </div>
