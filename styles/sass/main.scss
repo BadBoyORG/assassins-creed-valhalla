@@ -3,9 +3,24 @@
 @use "components/header";
 @use "components/home";
 @use "components/story";
+@use "components/features";
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+
+  body {
+    background: linear-gradient(90deg, #0c0b07 0 60%, #0c0e09 100%);
+    -webkit-font-smoothing: antialiased;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
 }

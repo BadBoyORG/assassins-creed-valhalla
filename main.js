@@ -10,8 +10,9 @@ document.querySelector("#app").innerHTML = `
       />
       <ul>
         <li>home</li>
-        <li>story</li>
-        <li>features</li>
+        <li>universe</li>
+        <li>summary</li>
+        <li>about us</li>
       </ul>
     </nav>
   </header>
@@ -79,6 +80,11 @@ document.querySelector("#app").innerHTML = `
             />
           </a>
         </div>
+      </div>
+    </section>
+    <section id="features">
+      <div class="container">
+        <h1 class="title">features</h1>
       </div>
     </section>
   </main>
