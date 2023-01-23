@@ -4,7 +4,7 @@
   position: relative;
   background: linear-gradient(90deg, #0c0b07 0 60%, #0c0e09 100%);
   width: 100%;
-  height: 542px;
+  height: 85vh;
 
   .container {
     background: url(../../../src/assets/story-background.png);
@@ -14,6 +14,45 @@
     top: -21rem;
     width: 100%;
     height: 1064.5px;
+    padding: 7rem 0 0 2.813rem;
+
+    h1 {
+      font-size: 2.25rem;
+      line-height: 3rem;
+      letter-spacing: -0.01em;
+      text-align: left;
+      text-transform: uppercase;
+      font-weight: 400;
+      font-family: variables.$font-primary;
+      color: variables.$letters-color;
+    }
+
+    .text-grid {
+      display: flex;
+      flex-direction: row;
+      gap: 1.7rem;
+      margin: 2.25rem 0 2rem 0;
+      width: 36%;
+
+      p {
+        font-size: 1.125rem;
+        line-height: 1.55rem;
+        letter-spacing: -0.01em;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: variables.$font-primary;
+        color: darken(variables.$letters-color, 25);
+
+        span {
+          position: relative;
+          bottom: -0.3rem;
+          color: darken(variables.$letters-color, 15);
+          font-size: 1.625rem;
+          opacity: 1;
+        }
+      }
+    }
 
     figure {
       max-width: 19.9rem;
@@ -51,6 +90,25 @@
           color: darken(variables.$letters-color, 15);
           font-size: 1.05rem;
           opacity: 1;
+        }
+      }
+    }
+
+    .social-networks {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      width: 8%;
+      margin-top: 1.75rem;
+
+      a {
+        cursor: pointer;
+        transition: 0.2s linear;
+
+        &:hover {
+          position: relative;
+          top: -0.2rem;
         }
       }
     }

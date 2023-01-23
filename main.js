@@ -60,7 +60,24 @@ document.querySelector("#app").innerHTML = `
           </figcaption>
         </figure>
         <div class="social-networks">
-        
+          <a href="https://www.instagram.com/ubisoft/" target="_blank"> 
+            <img 
+              src="./src/assets/social-network-instagram.png" 
+              alt="Social network Instagram" 
+            />
+          </a>
+          <a href="https://www.ubisoft.com/" target="_blank">
+            <img 
+              src="./src/assets/social-network-website.png" 
+              alt="Social network Website" 
+            />
+          </a>
+          <a href="https://discord.com/invite/ubisoftsupport" target="_blank">
+            <img 
+              src="./src/assets/social-network-discord.png" 
+              alt="Social network Discord" 
+            />
+          </a>
         </div>
       </div>
     </section>
