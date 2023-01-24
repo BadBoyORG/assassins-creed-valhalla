@@ -1,0 +1,20 @@
+@use "variables";
+
+@mixin default-text($font-size, $line-height, $text-align, $amount) {
+  font-size: $font-size;
+  font-weight: 400;
+  font-family: variables.$font-primary;
+  letter-spacing: -0.01em;
+  line-height: $line-height;
+  text-transform: uppercase;
+  text-align: $text-align;
+  color: darken(variables.$letters-color, $amount);
+}
+
+@mixin capitalize-text($bottom, $font-size) {
+  position: relative;
+  bottom: $bottom;
+  color: darken(variables.$letters-color, 15);
+  font-size: $font-size;
+  opacity: 1;
+}

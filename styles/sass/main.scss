@@ -15,12 +15,27 @@ html {
   scroll-behavior: smooth;
 
   body {
-    background: linear-gradient(90deg, #0c0b07 0 60%, #0c0e09 100%);
+    background: variables.$background-color;
     -webkit-font-smoothing: antialiased;
 
     img {
       width: 100%;
       height: auto;
     }
+  }
+}
+
+::-webkit-scrollbar {
+  background: linear-gradient(0deg, variables.$gradient-colors);
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: variables.$primary-color;
+  opacity: 0.7;
+  border-radius: 15px;
+
+  &:active {
+    background-color: darken(variables.$primary-color, 10);
   }
 }
