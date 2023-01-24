@@ -85,6 +85,32 @@ document.querySelector("#app").innerHTML = `
     <section id="features">
       <div class="container">
         <h1 class="title">features</h1>
+        <figure class="figure-left">
+          <img
+            class="figure-img" 
+            src="./src/assets/features-picture1.jpg" 
+            alt"Illustrative image of the game" 
+          />
+          <figcaption>
+            <h2 class="figure-title">adventure</h2>
+            <p class="figure-content">
+              <span>A</span>ssassin's <span>C</span>reed <span>V</span>alhalla tells a complex story set against an equally<span>,</span> if not more<span>,</span> enticing time in history<span>,</span> explored through a breathtaking world design<span>. T</span>he game is well over <span>100-</span>hours<span>,</span> which keeps getting better as you play along
+            </p>
+          </figcaption>
+        </figure>
+        <figure class="figure-right">
+          <figcaption>
+            <h2 class="figure-title">action</h2>
+            <p class="figure-content">
+              <span>A</span>s for stealth and combat<span>,</span> there is little to add to my initial impressions <span>–</span> stealth play and parkour are extremely fun<span>,</span> and open combat <span>–</span> both melee and ranged <span>–</span> are satisfying
+            </p>
+          </figcaption>
+          <img
+            class="figure-img" 
+            src="./src/assets/features-picture2.jpg" 
+            alt"Illustrative image of the game" 
+          />
+        </figure>
       </div>
     </section>
   </main>

@@ -7,4 +7,70 @@
   height: 100%;
   position: relative;
   z-index: 2;
+  padding: 4.75rem 2.813rem;
+
+  .title {
+    font-size: 2.25rem;
+    line-height: 3rem;
+    letter-spacing: -0.01em;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 400;
+    font-family: variables.$font-primary;
+    color: variables.$letters-color;
+  }
+
+  .figure-right {
+    margin-left: calc(20%);
+  }
+
+  figure {
+    display: flex;
+    flex-direction: row;
+    width: 80%;
+    margin-top: 8.125rem;
+
+    .figure-img {
+      width: 50%;
+    }
+
+    figcaption {
+      width: 50%;
+      background: rgba(196, 196, 196, 0.25);
+      backdrop-filter: blur(24.5px);     
+      padding: 2.8125rem 3.4375rem 2.5rem 3.4375rem;
+
+      .figure-title {
+        font-size: 2.125rem;
+        line-height: 3rem;
+        letter-spacing: -0.01em;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: variables.$font-primary;
+        color: variables.$letters-color;
+        margin-bottom: 2rem;
+      }
+
+      .figure-content {
+        width: 100%;
+        font-size: 1.25rem;
+        line-height: 1.7375rem;
+        letter-spacing: -0.01em;
+        text-align: left;
+        text-transform: uppercase;
+        font-weight: 400;
+        font-family: variables.$font-primary;
+        color: darken(variables.$letters-color, 25);
+
+        span {
+          position: relative;
+          bottom: -0.2rem;
+          color: darken(variables.$letters-color, 15);
+          font-size: 1.75rem;
+          opacity: 1;
+        }
+      }
+    }
+  }
 }
