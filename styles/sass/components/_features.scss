@@ -19,6 +19,7 @@
   }
 
   figure {
+    position: relative;
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -49,6 +50,22 @@
           @include mixins.capitalize-text(-0.2rem, 1.75rem);
         }
       }
+    }
+
+    .detail1 {
+      position: absolute;
+      height: 60px;
+      width: auto;
+      bottom: -60px;
+      right: 2.5rem;
+    }
+
+    .detail2 {
+      position: absolute;
+      height: 60px;
+      width: auto;
+      top: -60px;
+      left: 2.5rem;
     }
   }
 }
