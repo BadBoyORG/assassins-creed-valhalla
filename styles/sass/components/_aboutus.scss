@@ -1,0 +1,241 @@
+@use "../variables";
+@use "../mixins";
+
+#about-us {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80vh;
+  border-top: 2px solid #fff;
+
+  .container-ubisoft {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    padding: 3rem;
+    background-color: variables.$default-black-color;
+
+    .logo-ubisoft {
+      width: 60%;
+    }
+
+    .painel-links {
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+
+      a {
+        @include mixins.default-text(1.5rem, 2.5rem, left, 0);
+
+        text-decoration: none;
+        font-weight: 600;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover::first-line {
+          color: variables.$letters-color;
+        }
+      }
+
+      &:hover {
+        a {
+          color: darken(variables.$letters-color, 50);
+        }
+      }
+    }
+
+    .painel-legal-links {
+      display: flex;
+      flex-direction: column;
+      margin-top: 1rem;
+
+      a {
+        @include mixins.default-text(1rem, 1.7375rem, left, 0);
+
+        text-decoration: none;
+        cursor: pointer;
+        transition: 0.2s ease;
+
+        &:hover::first-line {
+          color: variables.$letters-color;
+        }
+      }
+
+      &:hover {
+        a {
+          color: darken(variables.$letters-color, 50);
+        }
+      }
+    }
+  }
+
+  .container-valhalla {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 3rem;
+    width: 100%;
+    height: 100%;
+
+    .logo-valhalla {
+      width: 25%;
+    }
+
+    .container-game-info {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      width: 100%;
+      margin-top: 3.5rem;
+
+      .info-studios {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          @include mixins.default-text(1rem, 1.7375rem, left, 25);
+        }
+
+        .info-studios-tags {
+          margin-top: 0.8rem;
+
+          span {
+            @include mixins.default-text(1.5rem, 1.5rem, left, 0);
+          }
+        }
+      }
+
+      .info-plataforms {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          @include mixins.default-text(1rem, 1.7375rem, left, 25);
+        }
+
+        .info-plataforms-tags {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.8rem;
+
+          span {
+            @include mixins.default-text(1.5rem, 1.5rem, left, 0);
+
+            margin-top: 1rem;
+          }
+
+          span:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+
+      .info-partners {
+        display: flex;
+        flex-direction: column;
+
+        h3 {
+          @include mixins.default-text(1rem, 1.7375rem, left, 25);
+        }
+
+        .info-partners-tags {
+          display: flex;
+          flex-direction: column;
+          margin-top: 0.8rem;
+
+          span {
+            @include mixins.default-text(1.5rem, 1.5rem, left, 0);
+
+            margin-top: 1rem;
+          }
+
+          span:first-child {
+            margin-top: 0;
+          }
+        }
+      }
+    }
+
+    .copyright-terms {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+
+      .copyright-terms-content {
+        font-size: 1rem;
+        font-family: variables.$font-primary;
+        font-weight: 400;
+        line-height: 1rem;
+        color: variables.$letters-color;
+        text-align: center;
+      }
+    }
+  }
+
+  .container-github {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+    height: 100%;
+    padding: 0 3rem;
+    background-color: variables.$default-black-color;
+
+    .photo-profile-github {
+      width: 100%;
+      overflow: hidden;
+
+      img {
+        clip-path: circle();
+      }
+    }
+
+    .info-profile-github {
+      h3 {
+        @include mixins.default-text(1.5rem, 1.5rem, center, 15);
+
+        span {
+          @include mixins.default-text(1rem, 1.5rem, center, 50);
+        }
+      }
+
+      p {
+        @include mixins.default-text(1.5rem, 2.5rem, center, 0);
+
+        margin: 1rem 0;
+        color: transparent;
+        background-image: linear-gradient(
+          90deg,
+          variables.$primary-color,
+          variables.$letters-color
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+      }
+
+      .btn {
+        @include mixins.default-text(1.5rem, 1.5rem, center, 15);
+
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 3.5rem;
+        background: linear-gradient(90deg, variables.$gradient-colors);
+        border-radius: 55px;
+        transition: 0.2s ease;
+
+        &:hover {
+          background: linear-gradient(
+            90deg,
+            lighten(#09766a, 15) 0%,
+            #09766a 50%,
+            #111615 100%
+          );
+        }
+      }
+    }
+  }
+}

@@ -9,7 +9,9 @@ document.querySelector("#app").innerHTML = `
         alt="Valhalla logo" 
       />
       <ul>
-        <li>home</li>
+        <li>
+          <a href="#home">home</a>
+        </li>
         <li>universe</li>
         <li>about us</li>
       </ul>
@@ -176,7 +178,9 @@ document.querySelector("#app").innerHTML = `
           </div>
         </div>
       </div>
-      <p class="copyright-terms">© 2021 Ubisoft Entertainment. All Rights Reserved. Assassin's Creed, Ubisoft and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the U.S. and/or other countries.</p> 
+      <div class="copyright-terms">
+        <p class="copyright-terms-content">© 2021 Ubisoft Entertainment. All Rights Reserved. Assassin's Creed, Ubisoft and the Ubisoft logo are registered or unregistered trademarks of Ubisoft Entertainment in the U.S. and/or other countries.</p> 
+      </div>
     </div>
     <div class="container-github">
       <div class="photo-profile-github">
@@ -188,7 +192,7 @@ document.querySelector("#app").innerHTML = `
       <div class="info-profile-github">
         <h3>Brian Santos <span>/ BadBoyORG</span></h3>
         <p>Web Developer</p>
-        <a href="https://github.com/BadBoyORG">my profile</a>
+        <a class="btn" href="https://github.com/BadBoyORG" target="_blank">my profile</a>
       </div>
     </div>
   </footer>
