@@ -230,9 +230,9 @@
         &:hover {
           background: linear-gradient(
             90deg,
-            lighten(#09766a, 15) 0%,
-            #09766a 50%,
-            #111615 100%
+            lighten(variables.$second-color, 15) 0%,
+            variables.$second-color 50%,
+            variables.$default-black-color 100%
           );
         }
       }
