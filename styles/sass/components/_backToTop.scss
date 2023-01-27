@@ -1,0 +1,39 @@
+@use "../variables";
+
+.back-to-top {
+  background: linear-gradient(180deg, variables.$gradient-colors);
+  position: fixed;
+  z-index: 100;
+  right: 1rem;
+  bottom: 1rem;
+  width: 3.5rem;
+  height: 3.5rem;
+  padding: 0.5rem;
+  clip-path: circle();
+  cursor: pointer;
+
+  visibility: hidden;
+  opacity: 0;
+  transition: 0.3s;
+  transform: translateY(100%);
+
+  svg {
+    width: 100%;
+    color: variables.$letters-color;
+  }
+
+  &:hover {
+    background: linear-gradient(
+      180deg,
+      lighten(#09766a, 15) 0%,
+      #09766a 50%,
+      #111615 100%
+    );
+  }
+}
+
+.back-to-top.show {
+  visibility: visible;
+  opacity: 1;
+  transform: translateY(0);
+}
