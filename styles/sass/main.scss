@@ -1,6 +1,6 @@
 @use "variables";
 
-@use "components/header";
+@use "components/headerTest";
 @use "components/home";
 @use "components/story";
 @use "components/features";
@@ -19,6 +19,10 @@ html {
   body {
     background: variables.$background-color;
     -webkit-font-smoothing: antialiased;
+    
+    @media (max-width: 999px) {
+      overflow-x: hidden;
+    }
 
     img {
       width: 100%;

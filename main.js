@@ -1,5 +1,12 @@
-import "./styles/css/main.css"
+import "./styles/css/main.css";
 
+//responsive navbar
+document.querySelector(".hamburguer").addEventListener("click", () => {
+  document.querySelector(".hamburguer").classList.toggle("active")
+  document.querySelector(".nav-menu").classList.toggle("active")
+});
+
+//button for back to top the page
 function backToTop() {
   const backToTopButton = document.querySelector(".back-to-top")
 
@@ -10,26 +17,36 @@ function backToTop() {
   }
 }
 
-window.addEventListener("scroll", function () {
+window.addEventListener("scroll", () => {
   backToTop()
 })
 
+//HTML content
 document.querySelector("#app").innerHTML = `
   <header>
     <nav class="navbar">
       <img 
         class="logo" 
         src="./src/assets/valhalla-logo.png"
-        alt="Valhalla logo" 
+        alt="Valhalla logo"
       />
-      <ul>
-        <li>
-          <a href="#home">home</a>
+      <ul class="nav-menu">
+        <li class="nav-item"> 
+          <a href="#home" class="nav-link">home</a>
         </li>
-        <li>universe</li>
-        <li>about us</li>
+        <li class="nav-item">
+          <a href="#features" class="nav-link">universe</a>  
+        </li>
+        <li class="nav-item">
+          <a href="#about-us" class="nav-link">about us</a>
+        </li>
       </ul>
     </nav>
+    <div class="hamburguer">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>   
+    </div>
   </header>
   <main>
     <section id="home">
