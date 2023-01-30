@@ -1,10 +1,10 @@
 @use "variables";
 
-@use "components/headerTest";
+@use "components/header";
 @use "components/home";
 @use "components/story";
 @use "components/features";
-@use "components/aboutUs";
+@use "components/aboutus";
 @use "components/backToTop";
 
 * {
@@ -19,9 +19,17 @@ html {
   body {
     background: variables.$background-color;
     -webkit-font-smoothing: antialiased;
-    
-    @media (max-width: 999px) {
+
+    @media (max-width: 768px) {
       overflow-x: hidden;
+    }
+
+    header {
+      @media (max-width: 768px) {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
     }
 
     img {

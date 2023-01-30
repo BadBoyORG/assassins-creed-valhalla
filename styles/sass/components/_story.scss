@@ -57,7 +57,7 @@
         width: 45%;
         padding: 0.5rem;
         background-color: #7d7667;
-        opacity: 0.9;        
+        opacity: 0.9;
 
         span {
           @include mixins.capitalize-text(-0.2rem, 1.05rem);
@@ -66,6 +66,7 @@
     }
 
     .social-networks {
+      color: #fff;
       display: flex;
       flex-direction: row;
       align-items: center;
@@ -76,6 +77,10 @@
       a {
         cursor: pointer;
         transition: 0.2s linear;
+
+        img {
+          width: 24px;
+        }
 
         &:hover {
           position: relative;

@@ -1,36 +1,31 @@
 import "./styles/css/main.css";
 
-//responsive navbar
-document.querySelector(".hamburguer").addEventListener("click", () => {
-  document.querySelector(".hamburguer").classList.toggle("active")
-  document.querySelector(".nav-menu").classList.toggle("active")
-});
-
 //button for back to top the page
 function backToTop() {
-  const backToTopButton = document.querySelector(".back-to-top")
+  const backToTopButton = document.querySelector(".back-to-top");
 
   if (window.scrollY >= 800) {
-    backToTopButton.classList.add("show")
+    backToTopButton.classList.add("show");
   } else {
-    backToTopButton.classList.remove("show")
+    backToTopButton.classList.remove("show");
   }
 }
 
 window.addEventListener("scroll", () => {
-  backToTop()
-})
+  backToTop();
+});
 
 //HTML content
 document.querySelector("#app").innerHTML = `
-  <header>
+  <header class='header'>
+    <input id='menu-control' type="checkbox" />
+    <img 
+      class="logo" 
+      src="./src/assets/valhalla-logo.png"
+      alt="Valhalla logo"
+    />
     <nav class="navbar">
-      <img 
-        class="logo" 
-        src="./src/assets/valhalla-logo.png"
-        alt="Valhalla logo"
-      />
-      <ul class="nav-menu">
+      <ul class="nav-list">
         <li class="nav-item"> 
           <a href="#home" class="nav-link">home</a>
         </li>
@@ -43,10 +38,10 @@ document.querySelector("#app").innerHTML = `
       </ul>
     </nav>
     <div class="hamburguer">
-      <span class="bar"></span>
-      <span class="bar"></span>
-      <span class="bar"></span>   
-    </div>
+      <label for='menu-control'>
+        <img src="./src/assets/menu.svg" alt="menu icon" />
+      </label>
+      </div>
   </header>
   <main>
     <section id="home">
@@ -95,19 +90,19 @@ document.querySelector("#app").innerHTML = `
         <div class="social-networks">
           <a href="https://www.instagram.com/ubisoft/" target="_blank"> 
             <img 
-              src="./src/assets/social-network-instagram.png" 
+              src="./src/assets/social-network-instagram.svg" 
               alt="Social network Instagram" 
             />
           </a>
           <a href="https://www.ubisoft.com/" target="_blank">
             <img 
-              src="./src/assets/social-network-website.png" 
+              src="./src/assets/social-network-website.svg" 
               alt="Social network Website" 
             />
           </a>
           <a href="https://discord.com/invite/ubisoftsupport" target="_blank">
             <img 
-              src="./src/assets/social-network-discord.png" 
+              src="./src/assets/social-network-discord.svg" 
               alt="Social network Discord" 
             />
           </a>
@@ -231,4 +226,4 @@ document.querySelector("#app").innerHTML = `
   <a href="#home" class="back-to-top">
     <svg enable-background="new 0 0 40 40" version="1.1" viewBox="0 0 40 40" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" fill="currentcolor" fill-opacity="1"><g><path d="M27.9,23.6c-0.3,0-0.5-0.1-0.7-0.3L19.9,16l-7.3,7.3c-0.4,0.4-1,0.4-1.4,0s-0.4-1,0-1.4l8-8c0.4-0.4,1-0.4,1.4,0l8,8   c0.4,0.4,0.4,1,0,1.4C28.4,23.5,28.2,23.6,27.9,23.6z"/></g><g><path d="M20,40C9,40,0,31,0,20S9,0,20,0c4.5,0,8.7,1.5,12.3,4.2c0.4,0.3,0.5,1,0.2,1.4c-0.3,0.4-1,0.5-1.4,0.2C27.9,3.3,24,2,20,2   C10.1,2,2,10.1,2,20s8.1,18,18,18s18-8.1,18-18c0-3.2-0.9-6.4-2.5-9.2c-0.3-0.5-0.1-1.1,0.3-1.4c0.5-0.3,1.1-0.1,1.4,0.3   C39,12.9,40,16.4,40,20C40,31,31,40,20,40z"/></g></svg>
   </a>
-`
+`;
