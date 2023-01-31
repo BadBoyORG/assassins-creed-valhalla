@@ -43,6 +43,10 @@
   }
 
   .hamburguer {
+    img {
+      cursor: pointer;
+    }
+    
     @media (min-width: 768px) {
       display: none;
     }
@@ -60,9 +64,13 @@
       width: 100%;
       position: fixed;
       background: linear-gradient(90deg, variables.$gradient-colors);
-      overflow: auto;
       transition: all 0.3s cubic-bezier(0, 1, 0, 1);
       overflow: hidden;
+      border-radius: 0 0 15px 15px;
+      border-bottom: 3.5px solid variables.$default-black-color;
+      -webkit-box-shadow: 0px 10px 15px 0px variables.$default-black-color;
+      -moz-box-shadow: 0px 10px 15px 0px variables.$default-black-color;
+      box-shadow: 0px 10px 15px 0px variables.$default-black-color;
     }
 
     .nav-list {
@@ -78,10 +86,7 @@
       @media (max-width: 768px) {
         flex-direction: column;
         justify-content: start;
-      }
-
-      &.active {
-        transform: translateX(0);
+        gap: 3rem;
       }
 
       li {
@@ -91,6 +96,10 @@
           text-decoration: none;
           transition: 0.2s linear;
           cursor: pointer;
+
+          @media (max-width: 768px) {
+            color: darken(variables.$letters-color, 15);
+          }
 
           &:hover {
             color: darken(variables.$letters-color, 15);

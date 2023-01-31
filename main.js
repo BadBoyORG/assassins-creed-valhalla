@@ -1,6 +1,6 @@
 import "./styles/css/main.css";
 
-//button for back to top the page
+//Button for back to top the page
 function backToTop() {
   const backToTopButton = document.querySelector(".back-to-top");
 
@@ -11,6 +11,7 @@ function backToTop() {
   }
 }
 
+//When scroll
 window.addEventListener("scroll", () => {
   backToTop();
 });
@@ -41,7 +42,7 @@ document.querySelector("#app").innerHTML = `
       <label for='menu-control'>
         <img src="./src/assets/menu.svg" alt="menu icon" />
       </label>
-      </div>
+    </div>
   </header>
   <main>
     <section id="home">
