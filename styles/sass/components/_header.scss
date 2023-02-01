@@ -17,12 +17,16 @@
   -moz-box-shadow: 0px 10px 15px 0px variables.$default-black-color;
   box-shadow: 0px 10px 15px 0px variables.$default-black-color;
 
+  @media screen and (min-width: 1950px) {
+    height: 8vh;
+  }
+
   #menu-control {
     display: none;
 
     &:not(:checked) {
       & ~ .navbar {
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
           height: 0;
         }
       }
@@ -30,7 +34,7 @@
 
     &:checked {
       & ~ .navbar {
-        @media (max-width: 768px) {
+        @media screen and (max-width: 768px) {
           height: fit-content;
           padding: 2rem 0;
         }
@@ -39,26 +43,22 @@
   }
 
   .logo {
-    width: calc(52px * 2);
+    height: calc(100% - 2rem);
+    width: auto;
   }
 
   .hamburguer {
-    img {
-      cursor: pointer;
-    }
-    
-    @media (min-width: 768px) {
+    @media screen and (min-width: 769px) {
       display: none;
     }
 
-    button {
-      all: unset;
-      line-height: 0;
+    label {
+      cursor: pointer;
     }
   }
 
   .navbar {
-    @media (max-width: 768px) {
+    @media screen and (max-width: 768px) {
       top: 4.25rem;
       left: 0;
       width: 100%;
@@ -83,7 +83,7 @@
       height: 100%;
       gap: 4rem;
 
-      @media (max-width: 768px) {
+      @media screen and (max-width: 768px) {
         flex-direction: column;
         justify-content: start;
         gap: 3rem;
@@ -97,7 +97,15 @@
           transition: 0.2s linear;
           cursor: pointer;
 
-          @media (max-width: 768px) {
+          @media screen and (min-width: 2560px) {
+            @include mixins.default-text(2.4rem, 3rem, left, 50);
+          }
+
+          @media screen and (min-width: 1950px) {
+            @include mixins.default-text(1.8rem, 2.25rem, left, 50);
+          }
+
+          @media screen and (max-width: 768px) {
             color: darken(variables.$letters-color, 15);
           }
 

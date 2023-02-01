@@ -20,12 +20,12 @@ html {
     background: variables.$background-color;
     -webkit-font-smoothing: antialiased;
 
-    @media (max-width: 768px) {
+    @media screen and (min-width: 768px) {
       overflow-x: hidden;
     }
 
     header {
-      @media (max-width: 768px) {
+      @media screen and (min-width: 768px) {
         display: flex;
         justify-content: space-between;
         align-items: center;
