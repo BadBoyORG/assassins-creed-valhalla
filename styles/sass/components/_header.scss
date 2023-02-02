@@ -97,10 +97,6 @@
           transition: 0.2s linear;
           cursor: pointer;
 
-          @media screen and (min-width: 1950px) {
-            @include mixins.default-text(1.6rem, 2rem, left, 50);
-          }
-
           @media screen and (max-width: 768px) {
             color: darken(variables.$letters-color, 15);
           }

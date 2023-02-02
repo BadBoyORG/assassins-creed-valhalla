@@ -49,10 +49,6 @@
         cursor: pointer;
         transition: 0.2s ease;
 
-        @media screen and (min-width: 1950px) {
-          @include mixins.default-text(2rem, 3.33rem, left, 0);
-        }
-
         @media screen and (max-width: 1024px) {
           text-align: center;
         }
@@ -80,10 +76,6 @@
         text-decoration: none;
         cursor: pointer;
         transition: 0.2s ease;
-
-        @media screen and (min-width: 1950px) {
-          @include mixins.default-text(1.33rem, 2.32rem, left, 0);
-        }
 
         @media screen and (max-width: 1024px) {
           text-align: center;
@@ -139,10 +131,6 @@
         h3 {
           @include mixins.default-text(1rem, 1.7375rem, left, 25);
 
-          @media screen and (min-width: 1950px) {
-            @include mixins.default-text(1.33rem, 2.32rem, left, 25);
-          }
-
           @media screen and (max-width: 550px) {
             text-align: center;
           }
@@ -158,10 +146,6 @@
           span {
             @include mixins.default-text(1.5rem, 1.5rem, left, 0);
 
-            @media screen and (min-width: 1950px) {
-              @include mixins.default-text(2rem, 2rem, left, 0);
-            }
-
             @media screen and (max-width: 550px) {
               text-align: center;
             }
@@ -175,10 +159,6 @@
 
         h3 {
           @include mixins.default-text(1rem, 1.7375rem, left, 25);
-
-          @media screen and (min-width: 1950px) {
-            @include mixins.default-text(1.33rem, 2.32rem, left, 25);
-          }
 
           @media screen and (max-width: 550px) {
             text-align: center;
@@ -194,10 +174,6 @@
             @include mixins.default-text(1.5rem, 1.5rem, left, 0);
 
             margin-top: 1rem;
-
-            @media screen and (min-width: 1950px) {
-              @include mixins.default-text(2rem, 2rem, left, 0);
-            }
 
             @media screen and (max-width: 550px) {
               text-align: center;
@@ -217,10 +193,6 @@
         h3 {
           @include mixins.default-text(1rem, 1.7375rem, left, 25);
 
-          @media screen and (min-width: 1950px) {
-            @include mixins.default-text(1.33rem, 2.32rem, left, 25);
-          }
-
           @media screen and (max-width: 550px) {
             text-align: center;
           }
@@ -235,10 +207,6 @@
             @include mixins.default-text(1.5rem, 1.5rem, left, 0);
 
             margin-top: 1rem;
-
-            @media screen and (min-width: 1950px) {
-              @include mixins.default-text(2rem, 2rem, left, 0);
-            }
 
             @media screen and (max-width: 550px) {
               text-align: center;
@@ -316,16 +284,8 @@
       h3 {
         @include mixins.default-text(1.5rem, 1.5rem, center, 15);
 
-        @media screen and (min-width: 1950px) {
-          @include mixins.default-text(2rem, 2rem, center, 15);
-        }
-
         span {
           @include mixins.default-text(1rem, 1.5rem, center, 50);
-
-          @media screen and (min-width: 1950px) {
-            @include mixins.default-text(1.33rem, 2rem, center, 50);
-          }
         }
       }
 
@@ -341,11 +301,6 @@
         );
         background-clip: text;
         -webkit-background-clip: text;
-
-        @media screen and (min-width: 1950px) {
-          @include mixins.default-text(2rem, 3.33rem, center, 0);
-          color: transparent;
-        }
       }
 
       .btn {
@@ -361,10 +316,6 @@
         background: linear-gradient(90deg, variables.$gradient-colors);
         border-radius: 55px;
         transition: 0.2s ease;
-
-        @media screen and (min-width: 1950px) {
-          @include mixins.default-text(2rem, 2rem, center, 15);
-        }
 
         &:hover {
           background: linear-gradient(

@@ -9,6 +9,11 @@
   text-transform: uppercase;
   text-align: $text-align;
   color: darken(variables.$letters-color, $amount);
+
+  @media screen and (min-width: 1950px) {
+    font-size: calc($font-size / 3 + $font-size);
+    line-height: calc($line-height / 3 + $line-height);
+  }
 }
 
 @mixin capitalize-text($bottom, $font-size) {
@@ -17,4 +22,9 @@
   color: darken(variables.$letters-color, 15);
   font-size: $font-size;
   opacity: 1;
+
+  @media screen and (min-width: 1950px) {
+    font-size: calc($font-size / 3 + $font-size);
+    bottom: calc($bottom / 3 + $bottom);
+  }
 }
