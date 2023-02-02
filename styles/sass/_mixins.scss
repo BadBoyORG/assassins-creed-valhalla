@@ -14,6 +14,11 @@
     font-size: calc($font-size / 3 + $font-size);
     line-height: calc($line-height / 3 + $line-height);
   }
+
+  @media screen and (max-width: 550px) {
+    font-size: calc($font-size - $font-size / 3);
+    line-height: calc($line-height - $line-height / 3);
+  }
 }
 
 @mixin capitalize-text($bottom, $font-size) {
@@ -26,5 +31,10 @@
   @media screen and (min-width: 1950px) {
     font-size: calc($font-size / 3 + $font-size);
     bottom: calc($bottom / 3 + $bottom);
+  }
+
+  @media screen and (max-width: 550px) {
+    font-size: calc($font-size - $font-size / 3);
+    bottom: calc($bottom - $bottom / 3);
   }
 }

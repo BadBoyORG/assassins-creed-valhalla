@@ -21,6 +21,10 @@
     height: 8vh;
   }
 
+  @media screen and (max-width: 550px) {
+    padding: 0 2rem;
+  }
+
   #menu-control {
     display: none;
 
