@@ -97,12 +97,8 @@
           transition: 0.2s linear;
           cursor: pointer;
 
-          @media screen and (min-width: 2560px) {
-            @include mixins.default-text(2.4rem, 3rem, left, 50);
-          }
-
           @media screen and (min-width: 1950px) {
-            @include mixins.default-text(1.8rem, 2.25rem, left, 50);
+            @include mixins.default-text(1.6rem, 2rem, left, 50);
           }
 
           @media screen and (max-width: 768px) {

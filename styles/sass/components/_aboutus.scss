@@ -5,19 +5,35 @@
   display: flex;
   flex-direction: row;
   width: 100%;
-  height: 80vh;
+  height: fit-content;
   border-top: 2px solid #fff;
+
+  @media screen and (max-width: 1024px) {
+    flex-direction: column;
+  }
 
   .container-ubisoft {
     display: flex;
     flex-direction: column;
     width: 35%;
-    height: 100%;
     padding: 3rem;
     background-color: variables.$default-black-color;
 
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      align-items: center;
+    }
+
     .logo-ubisoft {
       width: 60%;
+
+      @media screen and (max-width: 1024px) {
+        width: 20%;
+      }
+
+      @media screen and (max-width: 550px) {
+        width: 40%;
+      }
     }
 
     .painel-links {
@@ -32,6 +48,14 @@
         font-weight: 600;
         cursor: pointer;
         transition: 0.2s ease;
+
+        @media screen and (min-width: 1950px) {
+          @include mixins.default-text(2rem, 3.33rem, left, 0);
+        }
+
+        @media screen and (max-width: 1024px) {
+          text-align: center;
+        }
 
         &:hover::first-line {
           color: variables.$letters-color;
@@ -57,6 +81,14 @@
         cursor: pointer;
         transition: 0.2s ease;
 
+        @media screen and (min-width: 1950px) {
+          @include mixins.default-text(1.33rem, 2.32rem, left, 0);
+        }
+
+        @media screen and (max-width: 1024px) {
+          text-align: center;
+        }
+
         &:hover::first-line {
           color: variables.$letters-color;
         }
@@ -76,18 +108,29 @@
     align-items: center;
     padding: 3rem;
     width: 100%;
-    height: 100%;
 
     .logo-valhalla {
       width: 25%;
+
+      @media screen and (max-width: 550px) {
+        width: 40%;
+      }
     }
 
     .container-game-info {
       display: flex;
       flex-direction: row;
       justify-content: space-between;
+      gap: 1rem;
       width: 100%;
       margin-top: 3.5rem;
+
+      @media screen and (max-width: 550px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
 
       .info-studios {
         display: flex;
@@ -95,13 +138,33 @@
 
         h3 {
           @include mixins.default-text(1rem, 1.7375rem, left, 25);
+
+          @media screen and (min-width: 1950px) {
+            @include mixins.default-text(1.33rem, 2.32rem, left, 25);
+          }
+
+          @media screen and (max-width: 550px) {
+            text-align: center;
+          }
         }
 
         .info-studios-tags {
           margin-top: 0.8rem;
 
+          @media screen and (max-width: 550px) {
+            text-align: center;
+          }
+
           span {
             @include mixins.default-text(1.5rem, 1.5rem, left, 0);
+
+            @media screen and (min-width: 1950px) {
+              @include mixins.default-text(2rem, 2rem, left, 0);
+            }
+
+            @media screen and (max-width: 550px) {
+              text-align: center;
+            }
           }
         }
       }
@@ -112,6 +175,14 @@
 
         h3 {
           @include mixins.default-text(1rem, 1.7375rem, left, 25);
+
+          @media screen and (min-width: 1950px) {
+            @include mixins.default-text(1.33rem, 2.32rem, left, 25);
+          }
+
+          @media screen and (max-width: 550px) {
+            text-align: center;
+          }
         }
 
         .info-plataforms-tags {
@@ -123,6 +194,14 @@
             @include mixins.default-text(1.5rem, 1.5rem, left, 0);
 
             margin-top: 1rem;
+
+            @media screen and (min-width: 1950px) {
+              @include mixins.default-text(2rem, 2rem, left, 0);
+            }
+
+            @media screen and (max-width: 550px) {
+              text-align: center;
+            }
           }
 
           span:first-child {
@@ -137,6 +216,14 @@
 
         h3 {
           @include mixins.default-text(1rem, 1.7375rem, left, 25);
+
+          @media screen and (min-width: 1950px) {
+            @include mixins.default-text(1.33rem, 2.32rem, left, 25);
+          }
+
+          @media screen and (max-width: 550px) {
+            text-align: center;
+          }
         }
 
         .info-partners-tags {
@@ -148,6 +235,14 @@
             @include mixins.default-text(1.5rem, 1.5rem, left, 0);
 
             margin-top: 1rem;
+
+            @media screen and (min-width: 1950px) {
+              @include mixins.default-text(2rem, 2rem, left, 0);
+            }
+
+            @media screen and (max-width: 550px) {
+              text-align: center;
+            }
           }
 
           span:first-child {
@@ -162,6 +257,11 @@
       height: 100%;
       display: flex;
       align-items: flex-end;
+      margin-top: 2rem;
+
+      @media screen and (max-width: 550px) {
+        margin-top: 3rem;
+      }
 
       .copyright-terms-content {
         font-size: 1rem;
@@ -170,6 +270,11 @@
         line-height: 1rem;
         color: variables.$letters-color;
         text-align: center;
+
+        @media screen and (min-width: 1950px) {
+          font-size: 1.33rem;
+          line-height: 1.33rem;
+        }
       }
     }
   }
@@ -178,13 +283,29 @@
     display: flex;
     flex-direction: column;
     width: 35%;
-    height: 100%;
-    padding: 0 3rem;
+    padding: 0 3rem 2rem 3rem;
     background-color: variables.$default-black-color;
+
+    @media screen and (min-width: 1950px) {
+      align-items: center;
+    }
+
+    @media screen and (max-width: 1024px) {
+      width: 100%;
+      align-items: center;
+    }
 
     .photo-profile-github {
       width: 100%;
       overflow: hidden;
+
+      @media screen and (min-width: 1950px) {
+        width: 70%;
+      }
+
+      @media screen and (max-width: 1024px) {
+        width: 20%;
+      }
 
       img {
         clip-path: circle();
@@ -195,8 +316,16 @@
       h3 {
         @include mixins.default-text(1.5rem, 1.5rem, center, 15);
 
+        @media screen and (min-width: 1950px) {
+          @include mixins.default-text(2rem, 2rem, center, 15);
+        }
+
         span {
           @include mixins.default-text(1rem, 1.5rem, center, 50);
+
+          @media screen and (min-width: 1950px) {
+            @include mixins.default-text(1.33rem, 2rem, center, 50);
+          }
         }
       }
 
@@ -212,6 +341,11 @@
         );
         background-clip: text;
         -webkit-background-clip: text;
+
+        @media screen and (min-width: 1950px) {
+          @include mixins.default-text(2rem, 3.33rem, center, 0);
+          color: transparent;
+        }
       }
 
       .btn {
@@ -222,10 +356,15 @@
         align-items: center;
         justify-content: center;
         width: 100%;
-        height: 3.5rem;
+        height: fit-content;
+        padding: 1rem 2rem;
         background: linear-gradient(90deg, variables.$gradient-colors);
         border-radius: 55px;
         transition: 0.2s ease;
+
+        @media screen and (min-width: 1950px) {
+          @include mixins.default-text(2rem, 2rem, center, 15);
+        }
 
         &:hover {
           background: linear-gradient(
