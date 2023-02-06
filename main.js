@@ -47,7 +47,8 @@ document.querySelector("#app").innerHTML = `
   <main>
     <section id="home">
       <div class="container">
-        <img 
+        <img
+          class="img-home" 
           src="./src/assets/home-picture.png" alt="Illustrative image of the game" 
         />
         <p><span>P</span>lay a viking name eivor who as been trained since childhood to become warrior</p> 
