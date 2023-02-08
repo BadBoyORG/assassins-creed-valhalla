@@ -114,6 +114,10 @@
         left: calc(30% + 20px);
       }
 
+      @media screen and (max-width: 380px) {
+        left: 30%;
+      }
+
       &:hover {
         background-color: variables.$default-black-color;
         border: 2px solid variables.$default-black-color;
