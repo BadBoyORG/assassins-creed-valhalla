@@ -34,6 +34,12 @@
           height: 0;
         }
       }
+
+      & ~ .toggle-buttons {
+        .x-icon {
+          display: none;
+        }
+      }
     }
 
     &:checked {
@@ -41,6 +47,12 @@
         @media screen and (max-width: 768px) {
           height: fit-content;
           padding: 2rem 0;
+        }
+      }
+
+      & ~ .toggle-buttons {
+        .hamburguer-icon {
+          display: none;
         }
       }
     }
@@ -51,7 +63,7 @@
     width: auto;
   }
 
-  .hamburguer {
+  .toggle-buttons {
     @media screen and (min-width: 769px) {
       display: none;
     }
