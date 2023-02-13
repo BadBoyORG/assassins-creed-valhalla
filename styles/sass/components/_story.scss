@@ -10,7 +10,7 @@
     height: 75vh;
   }
 
-  @media screen and (max-width: 1250px) {    
+  @media screen and (max-width: 1250px) {
     height: 110vh;
   }
 
@@ -31,7 +31,7 @@
   }
 
   .container {
-    background: url(../../../src/assets/story-background.png);
+    background: url(../.././assets/story-background.png);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: top center;
@@ -55,7 +55,7 @@
     }
 
     @media screen and (max-width: 1250px) {
-      padding-top: 7rem;    
+      padding-top: 7rem;
       background-position: top left;
     }
 

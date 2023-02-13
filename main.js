@@ -1,28 +1,54 @@
-import "./styles/css/main.css";
+import "./styles/css/main.css"
 
-//Button for back to top the page
-function backToTop() {
-  const backToTopButton = document.querySelector(".back-to-top");
+/* Menu active when the page is visible */
+const sections = document.querySelectorAll("main section[id]")
+function activeteMenuAtCurrentSection() {
+  const checkpoint = window.pageYOffset + (window.innerHeight / 8) * 4
 
-  if (window.scrollY >= 800) {
-    backToTopButton.classList.add("show");
-  } else {
-    backToTopButton.classList.remove("show");
+  for (const section of sections) {
+    const sectionTop = section.offsetTop
+    const sectionHeight = section.offsetHeight
+    const sectionId = section.getAttribute("id")
+
+    const checkpointStart = checkpoint >= sectionTop
+    const checkpointEnd = checkpoint <= sectionTop + sectionHeight
+
+    if (checkpointStart && checkpointEnd) {
+      document
+        .querySelector("nav ul li a[href*=" + sectionId + "]")
+        .classList.add("active")
+    } else {
+      document
+        .querySelector("nav ul li a[href*=" + sectionId + "]")
+        .classList.remove("active")
+    }
   }
 }
 
-//When scroll
-window.addEventListener("scroll", () => {
-  backToTop();
-});
+/* Button for back to top the page */
+function backToTop() {
+  const backToTopButton = document.querySelector(".back-to-top")
 
-//HTML content
+  if (window.scrollY >= 800) {
+    backToTopButton.classList.add("show")
+  } else {
+    backToTopButton.classList.remove("show")
+  }
+}
+
+/* When scroll */
+window.addEventListener("scroll", () => {
+  backToTop()
+  activeteMenuAtCurrentSection()
+})
+
+/* HTML content */
 document.querySelector("#app").innerHTML = `
   <header class='header'>
     <input id='menu-control' type="checkbox" />
     <img 
       class="logo" 
-      src="./src/assets/valhalla-logo.png"
+      src="/assets/valhalla-logo.png"
       alt="Valhalla logo"
     />
     <nav class="navbar">
@@ -42,11 +68,11 @@ document.querySelector("#app").innerHTML = `
       <label for="menu-control">
         <img
           class="hamburguer-icon" 
-          src="./src/assets/menu.svg" alt="hamburguer icon" 
+          src="/assets/menu.svg" alt="hamburguer icon" 
         />
         <img
           class="x-icon" 
-          src="./src/assets/x.svg" 
+          src="/assets/x.svg" 
           alt="x icon"
         />
       </label>
@@ -57,22 +83,22 @@ document.querySelector("#app").innerHTML = `
       <div class="container">
         <img
           class="img-home" 
-          src="./src/assets/home-picture.png" alt="Illustrative image of the game" 
+          src="/assets/home-picture.png" alt="Illustrative image of the game" 
         />
         <p><span>P</span>lay a viking name eivor who as been trained since childhood to become warrior</p> 
         <a href="https://store.ubi.com/ofertas/assassins-creed-valhalla/5e8353ff5cdf9a21c0b4e72e.html?lang=en-us " target="_blank">buy now</a>
         <div class="cards">   
           <img
             class="card" 
-            src="./src/assets/home-card-basim.jpg" alt="Illustrative image of a game character called Basim" 
+            src="/assets/home-card-basim.jpg" alt="Illustrative image of a game character called Basim" 
           />
           <img
             class="card" 
-            src="./src/assets/home-card-flann.jpg" alt="Illustrative image of a game character called Flann Sinna" 
+            src="/assets/home-card-flann.jpg" alt="Illustrative image of a game character called Flann Sinna" 
           />
           <img
             class="card"           
-            src="./src/assets/home-card-aelfred.jpg" alt="Illustrative image of a game character called Aelfred" 
+            src="/assets/home-card-aelfred.jpg" alt="Illustrative image of a game character called Aelfred" 
           />
         </div>
       </div>
@@ -90,7 +116,7 @@ document.querySelector("#app").innerHTML = `
         </div>
         <figure>
           <img 
-            src="./src/assets/story-picture.jpg"
+            src="/assets/story-picture.jpg"
             alt="Illustrative image of the game"
           />
           <figcaption>
@@ -100,19 +126,19 @@ document.querySelector("#app").innerHTML = `
         <div class="social-networks">
           <a href="https://www.instagram.com/ubisoft/" target="_blank"> 
             <img 
-              src="./src/assets/social-network-instagram.svg" 
+              src="/assets/social-network-instagram.svg" 
               alt="Social network Instagram" 
             />
           </a>
           <a href="https://www.ubisoft.com/" target="_blank">
             <img 
-              src="./src/assets/social-network-website.svg" 
+              src="/assets/social-network-website.svg" 
               alt="Social network Website" 
             />
           </a>
           <a href="https://discord.com/invite/ubisoftsupport" target="_blank">
             <img 
-              src="./src/assets/social-network-discord.svg" 
+              src="/assets/social-network-discord.svg" 
               alt="Social network Discord" 
             />
           </a>
@@ -125,7 +151,7 @@ document.querySelector("#app").innerHTML = `
         <figure class="figure-left">
           <img
             class="figure-img" 
-            src="./src/assets/features-picture1.jpg" 
+            src="/assets/features-picture1.jpg" 
             alt"Illustrative image of the game" 
           />
           <figcaption>
@@ -136,7 +162,7 @@ document.querySelector("#app").innerHTML = `
           </figcaption>
           <img
             class="detail1" 
-            src="./src/assets/features-detail-figure1.png"
+            src="/assets/features-detail-figure1.png"
             alt="Valhalla theme figure detail"
           />
         </figure>
@@ -149,12 +175,12 @@ document.querySelector("#app").innerHTML = `
           </figcaption>
           <img
             class="figure-img" 
-            src="./src/assets/features-picture2.jpg" 
+            src="/assets/features-picture2.jpg" 
             alt"Illustrative image of the game" 
           />
           <img
             class="detail2" 
-            src="./src/assets/features-detail-figure2.png"
+            src="/assets/features-detail-figure2.png"
             alt="Valhalla theme figure detail"
           />
         </figure>
@@ -165,7 +191,7 @@ document.querySelector("#app").innerHTML = `
     <div class="container-ubisoft">
       <div class="logo-ubisoft">
         <img 
-          src="./src/assets/ubisoft-logo.png"
+          src="/assets/ubisoft-logo.png"
           alt="Logo Ubisoft"
         />
       </div>
@@ -184,7 +210,7 @@ document.querySelector("#app").innerHTML = `
     <div class="container-valhalla">
       <div class="logo-valhalla">
         <img 
-          src="./src/assets/valhalla-logo.png" alt="Valhalla logo" 
+          src="/assets/valhalla-logo.png" alt="Valhalla logo" 
         />
       </div>
       <div class="container-game-info">
@@ -221,7 +247,7 @@ document.querySelector("#app").innerHTML = `
     <div class="container-github">
       <div class="photo-profile-github">
         <img 
-          src="./src/assets/photo-perfil-github.jpg" 
+          src="/assets/photo-perfil-github.jpg" 
           alt="Photo profile github" 
         />
       </div>

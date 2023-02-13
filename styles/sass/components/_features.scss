@@ -2,7 +2,7 @@
 @use "../mixins";
 
 #features {
-  background: url(../../../src/assets/features-background2.png);
+  background: url(../.././assets/features-background2.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
@@ -56,7 +56,7 @@
     figcaption {
       width: 50%;
       background: rgba(196, 196, 196, 0.25);
-      backdrop-filter: blur(24.5px);     
+      backdrop-filter: blur(24.5px);
       padding: 2.8125rem 3.4375rem 2.5rem 3.4375rem;
 
       @media screen and (max-width: 768px) {
